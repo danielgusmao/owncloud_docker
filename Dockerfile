@@ -29,16 +29,16 @@ RUN             apk add nginx php-fpm \
 RUN		rm -rf /var/cache/apk/*
 
 # add owncloud
-ADD 	https://download.owncloud.org/community/owncloud-9.0.0.zip /tmp/
-RUN	unzip -qq /tmp/owncloud-9.0.0.zip -d /
+ADD 	https://download.owncloud.org/community/owncloud-8.1.6.zip /tmp/
+RUN	unzip -qq /tmp/owncloud-8.1.6.zip -d /
 
 # add contacts, calander and documents app
-ADD	https://github.com/owncloud/contacts/releases/download/v1.1.0.0/contacts.tar.gz /tmp/
+ADD     https://github.com/owncloudarchive/contacts/releases/download/v0.4.0.1/contacts.tar.gz /tmp/
 RUN	tar -xzf /tmp/contacts.tar.gz -C /owncloud/apps/
-ADD	https://github.com/owncloud/documents/releases/download/v0.12.0/documents.zip /tmp/
+ADD     https://github.com/owncloud/documents/releases/download/v0.10.2/documents.zip /tmp/
 RUN	unzip -qq /tmp/documents.zip -d /owncloud/apps/
-ADD	https://github.com/owncloud/calendar/releases/download/v1.0/calendar.tar.gz /tmp/
-RUN	tar -xzf /tmp/calendar.tar.gz -C /owncloud/apps/
+ADD     https://github.com/owncloudarchive/calendar/releases/download/v0.7.4/calendar.zip /tmp/
+RUN	unzip -qq /tmp/calendar.zip -d /owncloud/apps/
 
 # clean
 RUN	rm /tmp/*
