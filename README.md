@@ -30,7 +30,7 @@ Or run with the default settings like this:
     docker run --name db -e MYSQL_ROOT_PASSWORD=password -d mariadb
     docker run --name owncloud -v $PWD/config:/owncloud/config \
                                -v $PWD/data:/owncloud/data \
-                               --link mariadb:mysqldb d4v1d31/owncloud
+                               --link db:mysqldb d4v1d31/owncloud
 
 ## Add more OwnCloud apps
 To add more apps copy the download link of the app and add two lines like this to
