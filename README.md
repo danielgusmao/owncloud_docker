@@ -16,7 +16,7 @@ For the first run without existing configuration or database you could set this
 Envirenment variables:
 
 |Variable| Default | Description |
-|--------------------------------|
+|--------|---------|-------------|
 |DBTYPE  | mysql       | Type of database (only mysql supportet yet)|
 |DBNAME  | owncloud    | Database name                              |
 |DBHOST  | mysqldb     | Hostname or address to datatbase           |
