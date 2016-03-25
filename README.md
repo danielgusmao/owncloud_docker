@@ -24,6 +24,7 @@ Envirenment variables:
 |DBPASS  | password    | Password for database username             |
 |ADMIN   | admin       | Username for OwnCloud administrator        |
 |ADMINPASS| password   | Password for OwnCloud administrator        |
+
 Or run with the default settings like this:
 
     docker run --name db -e MYSQL_ROOT_PASSWORD=password -d mariadb
