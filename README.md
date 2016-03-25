@@ -19,7 +19,7 @@ Envirenment variables:
 |--------|---------|-------------|
 |DBTYPE  | mysql       | Type of database (only mysql supportet yet)|
 |DBNAME  | owncloud    | Database name                              |
-|DBHOST  | mysqldb     | Hostname or address to datatbase           |
+|DBHOST  | mysqldb     | Hostname or address to database           |
 |DBUSER  | root        | Database Username for OwnCloud             |
 |DBPASS  | password    | Password for database username             |
 |ADMIN   | admin       | Username for OwnCloud administrator        |
@@ -31,6 +31,7 @@ Or run with the default settings like this:
     docker run --name owncloud -v $PWD/config:/owncloud/config \
                                -v $PWD/data:/owncloud/data \
                                --link db:mysqldb d4v1d31/owncloud
+
 
 ## Add more OwnCloud apps
 To add more apps copy the download link of the app and add two lines like this to
