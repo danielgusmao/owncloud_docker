@@ -29,6 +29,7 @@ $ocdir/occ app:enable calendar
 
 # fix rights for productivity
 set_rights.sh ${ocdir}
+chown -R nginx:nginx /var/lib/nginx/
 
 # go RUN!
 php-fpm
